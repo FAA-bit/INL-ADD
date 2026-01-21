@@ -26,7 +26,6 @@ static Event generateRandomEvent() {
     }
 
     // Example: TEMP ranges 0–45, button is 0/1, motion is 0/1.
-    // You can simplify or change this.
     if (e.type == EventType::TEMP)
         e.value = rand() % 46;      // temperature 0–45
     else
