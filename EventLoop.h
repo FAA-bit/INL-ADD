@@ -1,7 +1,7 @@
 ﻿#pragma once
 #include "EventQueue.h"
 #include "EventLog.h"
-#include "EventGenerator.cpp"
+#include "EventGenerator.h"
 #include "AlarmSet.h"
 
 class EventLoop {

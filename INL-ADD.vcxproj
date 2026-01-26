@@ -124,7 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AlarmSet.cpp" />
-    <ClCompile Include="EventGenerator.cpp" />
+    <ClCompile Include="Event.cpp" />
     <ClCompile Include="EventLog.cpp" />
     <ClCompile Include="EventLoop.cpp" />
     <ClCompile Include="EventQueue.cpp" />
@@ -133,6 +133,7 @@
   <ItemGroup>
     <ClInclude Include="AlarmSet.h" />
     <ClInclude Include="Event.h" />
+    <ClInclude Include="EventGenerator.h" />
     <ClInclude Include="EventLog.h" />
     <ClInclude Include="EventLoop.h" />
     <ClInclude Include="EventQueue.h" />

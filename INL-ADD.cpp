@@ -1,13 +1,14 @@
 // INL-ADD.cpp : This file contains the 'main' function. Program execution begins and ends there.
 // Inlämningsuppgift: Algoritmer, datastrukturer och design patterns.
+
 /*
-- Event.h - Eventlog.h: De är för att skapa och hantera händelser från sensorer.
+- Event.h - Event.cpp - Den är för att definiera en struktur för en händelse med tidsstämpel, sensorId, typ och värde.
 - EventLog.h - EventLog.cpp: De är för att lagra och hantera en samling av händelser i en dynamisk array.
 - EventQueue.h - EventQueue.cpp: De är för att skapa och hantera en kö av händelser med hjälp av en cirkulär buffert.
-- EventGenerator.h: Den är för att generera slumpmässiga händelser för teständamål.
+- EventGenerator.h - Den är för att generera slumpmässiga händelser för teständamål.
 - EventLoop.h - EventLoop.cpp: De är för att hantera huvudloopen som producerar och konsumerar händelser från kön och lagrar dem i loggen.
-- InsertionSort.h: Den är för att sortera händelser i EventLog baserat på deras tidsstämpel med hjälp av insättningssortering.
-- Search.h: Den är för att söka igenom EventLog för att hitta och skriva ut alla händelser som matchar ett angivet sensorId.
+- InsertionSort.h - Den är för att sortera händelser i EventLog baserat på deras tidsstämpel med hjälp av insättningssortering.
+- Search.h - Den är för att söka igenom EventLog för att hitta och skriva ut alla händelser som matchar ett angivet sensorId.
 - AlarmSet.h - AlarmSet.cpp: De är för att hantera ett system för larm baserat på sensorvärden och en tröskel.
 */
 
@@ -16,7 +17,7 @@
 #include <sstream>
 #include <string>
 #include "Event.h"
-#include "EventGenerator.cpp"
+#include "EventGenerator.h"
 #include "EventQueue.h"
 #include "EventLog.h"
 #include "EventLoop.h"
@@ -40,7 +41,7 @@ int main() {
     AlarmSet alarms(40);      // choose any threshold
     EventLoop loop(queue, log, alarms);
 
-    std::cout << "Embedded Event Logger — Commands: help\n";
+    std::cout << "Embedded Event Logger, Commands: help\n";
 
     std::string line;
     while (true) {
