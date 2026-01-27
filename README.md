@@ -1,5 +1,5 @@
 # INL-ADD
-### Embedded Event Logger
+## Embedded Event Logger
 ## Vad programmet gör
 Detta program simulerar ett enkelt inbyggt IoT-system som hanterar händelser från sensorer.
 Systemet:
@@ -18,28 +18,28 @@ Systemet:
     alarms
     set-threshold 40
 
-### Filstruktur och vad varje fil gör
+# Filstruktur och vad varje fil gör
 
-# Event.h / Event.cpp
+### Event.h / Event.cpp
 Definierar datastrukturen Event och funktionen nextTimestamp() som genererar tidsstämplar.
 
-# EventLog.h / EventLog.cpp
+### EventLog.h / EventLog.cpp
 En dynamisk array för att lagra händelser:
   - append() lägger till en händelse
   - get() hämtar
   - set() ändrar
 - växer automatiskt när den blir full
 
-# EventQueue.h / EventQueue.cpp
+### EventQueue.h / EventQueue.cpp
 En cirkulär kö för inkommande händelser:
   - enqueue() lägger in
   - dequeue() tar ut
   - isFull() / isEmpty() kontrollerar status
 
-# EventGenerator.h
+### EventGenerator.h
 Genererar slumpmässiga händelser med korrekta värden, sensor-ID och typ.
 
-# EventLoop.h / EventLoop.cpp
+### EventLoop.h / EventLoop.cpp
 Systemets “hjärna”.
 Varje tick() gör:
     1. skapa händelse
@@ -48,19 +48,19 @@ Varje tick() gör:
     4. lagra i loggen
     5. uppdatera larmsystemet
 
-# AlarmSet.h / AlarmSet.cpp
+### AlarmSet.h / AlarmSet.cpp
 Hanterar temperaturbaserade larm:
   - lägger till sensorer som överskrider tröskeln
   - tar bort sensorer som går under den
   - skriver ut aktiva larm
 
-# InsertionSort.h
+### InsertionSort.h
 Sorterar EventLog efter timestamp med insättningssortering.
 
-# Search.h
+### Search.h
 Söker efter och skriver ut händelser från ett visst sensor-ID.
 
-# main.cpp
+### main.cpp
 Innehåller kommandoloopen:
     - tar emot användarkommandon
     - kör event-loopen
