@@ -41,7 +41,7 @@ int main() {
     AlarmSet alarms(40);      // choose any threshold
     EventLoop loop(queue, log, alarms);
 
-    std::cout << "Embedded Event Logger, Commands: help\n";
+    std::cout << "Embedded Event Logger - Commands: help\n";
 
     std::string line;
     while (true) {
@@ -61,6 +61,8 @@ int main() {
                 << "  print            - print event log\n"
                 << "  Insertion sort   - sort log by timestamp using insertion sort\n"
                 << "  find <sensorId>  - search events by sensor\n"
+				<< "  alarms           - print active alarms\n"
+				<< "  set-threshold <t>- set alarm threshold\n"
                 << "  help             - show commands\n"
                 << "  exit             - quit program\n";
         }
