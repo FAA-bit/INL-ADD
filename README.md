@@ -18,7 +18,8 @@ Systemet:
     alarms
     set-threshold 40
 
-## Filstruktur och vad varje fil gör
+### Filstruktur och vad varje fil gör
+
 # Event.h / Event.cpp
 Definierar datastrukturen Event och funktionen nextTimestamp() som genererar tidsstämplar.
 
